@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="lib/LUHN.js"></script>
+	<script type="text/javascript">
+function comprobar(){
+	var cc = document.getElementById("cc").value;
+	alert(ccTest(cc));
+}
+function generar(){
+	var bin = document.getElementById("cc").value;
+	var cantidad = Number(document.getElementById("cantidad").value);
+	var ccs = document.getElementById("ccs");
+	ccs.innerHTML="";
+	for(var i=1;i<=cantidad;i++){
+		ccs.innerHTML+=ccGen(bin)+"\n";
+	}
+}
+window.onload=function(){
+	var luhn = new LUHN(16);
+	alert(luhn.cuadrado(3));	
+}	
+	</script>
+</head>
+<body>
+	<input type="text" id="cc" placeholder="BIN" value="537697187025605x">
+	<input type="text" id="cantidad" value="10" placeholder="Cantidad">
+	<input type="button" value="Comprobar" onclick="comprobar()">
+	<input type="button" value="Generar" onclick="generar()">
+	<br><br>
+	<textarea id="ccs" cols="60" rows="17"></textarea>
+</body>
+</html>

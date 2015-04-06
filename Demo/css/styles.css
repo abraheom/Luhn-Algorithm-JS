@@ -1,0 +1,48 @@
+#cards, #cont1 {
+    outline:none;
+    background-color:rgb(29, 31, 32);;
+    font-weight:bold;
+    font-size:20px;
+    font-family:courier;
+    padding:10px;
+    width:300px;
+    color:#9a8297;
+}
+#cont1 {
+    border:none;
+    border-bottom:7px inset #444;
+    font-size:20px;
+    color: #9a8297;
+}
+#input {
+    outline: none;
+    width: 70%;
+    display: inline-block;
+    margin: 0px;
+}
+img {
+    width: 25px;
+    vertical-align: middle;
+    margin:0px;
+}
+
+#cards div, #input div {
+    display:inline-block;
+}
+.ccBin {    
+    color:#96b38a;
+}
+.x {
+    color:#d0782a;
+}
+
+
+@media (max-width: 500px){
+    body {
+        margin: 0px;
+    }
+    #cards, #cont1 {
+        width:100%;
+        box-sizing:border-box;
+    }
+}
